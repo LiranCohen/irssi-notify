@@ -1,17 +1,4 @@
 #!/bin/bash
-die () {
-    echo "Usage:"
-    echo "$ ./in.sh username@server.address NICK"
-    echo ""
-    echo >&2 "$@"
-    exit 1
-}
-(( $# >= 2 )) || die "you must enter a user and server address in the form of user@server.net. You must also enter the <nick> you use on IRC."
-if [ -z "$1" ];then
-	echo "no 1"
-fi
-
-
 IRC_REMOTE=user@remote.server
 IRC_NICK=usernick
 NICK_ID=${IRC_NICK:0:4}
